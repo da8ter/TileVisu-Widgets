@@ -1,0 +1,12 @@
+{
+    "id": "{8EBE9939-DC45-AFDA-571B-EC617A17FFCE}",
+    "name": "TileVisu Widget Tile",
+    "type": 3,
+    "vendor": "",
+    "aliases": [],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "TWT",
+    "url": ""
+}
