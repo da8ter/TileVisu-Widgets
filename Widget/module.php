@@ -122,7 +122,8 @@ class TileVisuWidgetTile extends IPSModule
                 $this->UnregisterReference($ref);
             } 
             foreach ($ids as $id) {
-                if ($id !== '') {
+                // 0 = nicht zugeordnet; der Vergleich mit '' traf fuer Zahlen immer zu
+                if ($id > 0) {
                     $this->RegisterReference($id);
                 }
             }
@@ -139,7 +140,11 @@ class TileVisuWidgetTile extends IPSModule
 
 
         foreach (['bgImage', 'Schalter1', 'Schalter2', 'Schalter3', 'Schalter4', 'Schalter5', 'Schalter6', 'Schalter7', 'Schalter8', 'Schalter9', 'Schalter10'] as $VariableProperty)        {
-            $this->RegisterMessage($this->ReadPropertyInteger($VariableProperty), VM_UPDATE);
+            $id = $this->ReadPropertyInteger($VariableProperty);
+            // 0 = nicht zugeordnet: RegisterMessage(0, VM_UPDATE) meldete jede Variable im System an MessageSink
+            if ($id > 0) {
+                $this->RegisterMessage($id, VM_UPDATE);
+            }
         }
 
         // Schicke eine komplette Update-Nachricht an die Darstellung, da sich ja Parameter geändert haben können
