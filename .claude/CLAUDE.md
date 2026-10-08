@@ -33,4 +33,4 @@ php tests/module_test.php     # braucht die SDK-Attrappe aus dem Nachbar-Repo Ti
 
 ## Wissen
 
-Gemeinsames Symcon-Plattformwissen (Lebenszyklus, Kacheln, Icons): https://github.com/da8ter/SymDo-Family-Organizer/tree/SymDo-Beta/docs/plattform – lokal `../List/docs/plattform/`. Symcon-Fragen am offiziellen Handbuch prüfen.
+Gemeinsames Symcon-Plattformwissen (Lebenszyklus, Kacheln, Icons): https://github.com/da8ter/SymDo-Family-Organizer/tree/SymDo-Beta/.claude/docs/plattform – lokal `../List/.claude/docs/plattform/`. Symcon-Fragen am offiziellen Handbuch prüfen.
